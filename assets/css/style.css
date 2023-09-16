@@ -1,16 +1,17 @@
-.root{
-    --head: #31475f;
-    --main: #4d6f94;
-    --acc: #2ca7c6;
+:root {
+    --head: #181149;
+    --main: #2a1e83;
+    --acc: #96d3e3;
 }
 
 body {
     font-size: 16px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Raleway';
 }
 
 h1, h2 {
     color: var(--head);
+    background-color: var(--acc);
 }
 
 h3, h4, h5, h6 {
@@ -26,7 +27,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 40px;
     background-color: var(--head);
 }
 
@@ -35,13 +35,46 @@ header section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
 }
 
 h1 {
-    font-size: 30px;
-    padding: 5px;
+    font-size: 42px;
+    padding: 5px 10px 5px 50px;
+}
+
+nav {
+    padding: 10px 50px 10px 10px;
 }
 
 nav a {
     color: var(--acc);
+    font-size: 14px;
+    padding: 3px 5px;
+    margin: 0 2px;
+    border-bottom: 3px solid var(--acc);
+    text-decoration: none;
+}
+
+#hero {
+    overflow: hidden;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+#hero img {
+    margin-top: -300px;
+    width: 100%;
+}
+
+header h2 {
+    font-size: 22px;
+    padding: 7px;
+    position: absolute;
+    bottom: 30px;
+    right: 70px;
 }
