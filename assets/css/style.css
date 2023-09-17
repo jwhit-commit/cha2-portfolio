@@ -98,7 +98,7 @@ main {
 }
 
 /* Arrange each section as flex row, then specify sizing, spacing, a border and h3 custom font styling */
-main section {
+main > section {
     display: flex;
     flex-direction: row;
     padding: 30px 80px 30px 80px;
@@ -124,27 +124,44 @@ main section h3 {
     padding: 5px 0;
 }
 
+/* Arrange as a 2-column grid to display project cards */
 #work article {
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 10px;
 }
 
+/* Add figure spacing within grid */
 #work figure {
     width: 100%;
     margin: 10px 10px;
     position: relative;
 }
 
+/* Let first grid item span 2 columns */
 #work figure:first-child {
     grid-column: span 2;
 }
 
-#work img {
+/* Make figure sections into crop containers with border with correct sizing */
+#work figure > section {
     width: 100%;
     border: 4px solid var(--acc);
+    height: 100px;
+    overflow: hidden;
+} 
+
+/* Let first grid item be taller */
+#work figure:first-child > section {
+    height: 300px;
 }
 
+/* Expand image larger than container to ensure responsive design */
+#work img {
+    width: 125%;
+}
+
+/* Style figcaptions and display via absolute positioning on top of project cards */
 #work figcaption {
     padding: 10px;
     background-color: var(--acc);
@@ -154,7 +171,6 @@ main section h3 {
 
 #work h4 {
     color: var(--head);
-    display: inline;
 }
 
 /* Arrange as flex row to space elements across bottom */
