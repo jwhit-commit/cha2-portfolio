@@ -78,3 +78,34 @@ header h2 {
     bottom: 30px;
     right: 70px;
 }
+
+main {
+    width: 100%;
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 30px 80px 30px 80px;
+    width: 100%;
+}
+
+main section article {
+    width: 80%;
+    border-left: 2px solid var(--main);
+    padding: 0 0 0 20px;
+}
+
+main section h3 {
+    text-align: right;
+    font-size: 46px;
+    width: 20%;
+    padding-right: 10px;
+    margin: 0 5px 0 20px;
+}
+
+#about-me p {
+    padding: 5px 0;
+}
+
