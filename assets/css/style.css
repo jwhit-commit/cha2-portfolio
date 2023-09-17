@@ -1,9 +1,12 @@
+
+/* Declare universal color variable for doc */
 :root {
     --head: #181149;
     --main: #2a1e83;
     --acc: #96d3e3;
 }
 
+/* Set standard font styling */
 body {
     font-size: 16px;
     font-family: 'Raleway';
@@ -19,10 +22,15 @@ h3, h4, h5, h6 {
 }
 
 p {
-    color: var(--main);
+    color: var(--head);
     font-size: 12px;
 }
-  
+
+a {
+    color: var(--head);
+}
+
+/* Arrange header as flex column, stacking header bar and hero image */
 header {
     display: flex;
     flex-direction: column;
@@ -30,6 +38,7 @@ header {
     background-color: var(--head);
 }
 
+/* Arrange header bar as flex row, with space between h1 and nav elements */
 header section {
     width: 100%;
     display: flex;
@@ -39,6 +48,7 @@ header section {
     padding: 10px 0;
 }
 
+/* Customize spacing and style h1 and nav elements */
 h1 {
     font-size: 42px;
     padding: 5px 10px 5px 50px;
@@ -53,10 +63,11 @@ nav a {
     font-size: 14px;
     padding: 3px 5px;
     margin: 0 2px;
-    border-bottom: 3px solid var(--acc);
+    border-bottom: 3px solid var(--acc);   /* add border as underline */
     text-decoration: none;
 }
 
+/* Create crop container for hero image, and arrang as flex container with relative position */
 #hero {
     overflow: hidden;
     height: 200px;
@@ -66,11 +77,13 @@ nav a {
     align-items: end;
 }
 
+/* Place hero image in crop container */
 #hero img {
     margin-top: -300px;
     width: 100%;
 }
 
+/* Position h2 on top of hero image using absolute positioning */
 header h2 {
     font-size: 22px;
     padding: 7px;
@@ -79,14 +92,15 @@ header h2 {
     right: 70px;
 }
 
+/* Add 100% widths to ensure consistent spacing of each section*/
 main {
     width: 100%;
 }
 
+/* Arrange each section as flex row, then specify sizing, spacing, a border and h3 custom font styling */
 main section {
     display: flex;
     flex-direction: row;
-    justify-content: left;
     padding: 30px 80px 30px 80px;
     width: 100%;
 }
@@ -105,7 +119,55 @@ main section h3 {
     margin: 0 5px 0 20px;
 }
 
+/* Paragraph spacing */
 #about-me p {
     padding: 5px 0;
 }
 
+#work article {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+}
+
+#work figure {
+    width: 100%;
+    margin: 10px 10px;
+    position: relative;
+}
+
+#work figure:first-child {
+    grid-column: span 2;
+}
+
+#work img {
+    width: 100%;
+    border: 4px solid var(--acc);
+}
+
+#work figcaption {
+    padding: 10px;
+    background-color: var(--acc);
+    position: absolute;
+    bottom: 20px
+}
+
+#work h4 {
+    color: var(--head);
+    display: inline;
+}
+
+/* Arrange as flex row to space elements across bottom */
+#contact-me article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Add border as underline */
+#contact-me a {
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 3px solid var(--main);
+}
