@@ -212,7 +212,7 @@ main section article {
     border-bottom: 5px solid var(--main);
 }
 
-
+  /* TABLET STYLING */
 @media screen and (max-width: 992px) {
     #hero img {
         margin-top: -100px;
@@ -241,6 +241,7 @@ main section article {
 
   }
 
+    /* LARGE SMARTPHONE STYLING */
   @media screen and (max-width: 768px) {
     header section {
         flex-direction: column;
@@ -281,6 +282,8 @@ main section article {
         padding: 7px;
         bottom: 0px;
         right: auto;
+        width: 100%;
+        text-align: center;
     }
 
     main > section {
@@ -307,6 +310,10 @@ main section article {
     #work article {
         display: flex;
         flex-direction: column;
+    }
+
+    #work figure {
+        margin: 5px;
     }
 
     #work figure > section {
@@ -353,3 +360,109 @@ main section article {
     }
 
   }
+
+  /* SMALL SMARTPHONE STYLING */
+  @media screen and (max-width: 576px) {
+
+    header {
+        width: 100%;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 46px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-gap: 2%;
+        padding: 0px;
+        width: 100%;
+    }
+
+    nav a {
+        background-color: var(--acc);
+        color: var(--head);
+        width: 100%;
+        margin: 2px 0;
+        padding: 6px 0;
+        border-bottom: 0;
+        text-align: center;
+        font-size: 16px;
+        transition: font-weight 0s ease 0s;
+    }
+
+    nav a:hover{
+        font-weight: bolder;
+        border-bottom: 0px;
+    }
+
+    header h2 {
+        font-size: 18px;
+        padding: 5px 40px;
+    }
+
+    main > section {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0;
+        padding: 20px 20px;
+        width: 100%;
+    }
+
+    main section h3 {
+        text-align: left;
+        font-size: 36px;
+        width: 100%;
+        padding-right: 0;
+        margin: 10px 0;
+        border-bottom: 2px solid var(--main);
+    }
+    
+    main section article {
+        width: 100%;
+        border-left: 0 solid var(--main);
+        padding: 0 0 0 0;
+    }
+
+    #about-me p {
+        font-size: 16px;
+        margin: 0 0 0 10px;
+    }
+
+    #work article {
+        margin: 0 0 0 0;
+        width: auto;
+    }
+
+    #work figure {
+        margin: 5px 0;
+    }
+
+    #work figure:first-child> section{
+        height: 100px;
+    }
+
+    #work figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        bottom: 0px;
+    }
+
+    #work p {
+        display: none;
+    }
+
+    #contact-me article {
+        align-items: start;
+    }
+
+    #contact-me a {
+        margin: 5px 0 5px 10px;
+    }
+
+  }
+  
