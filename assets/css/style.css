@@ -106,14 +106,8 @@ main {
 main > section {
     display: flex;
     flex-direction: row;
-    padding: 30px 80px 30px 80px;
+    padding: 30px 80px;
     width: 100%;
-}
-
-main section article {
-    width: 80%;
-    border-left: 2px solid var(--main);
-    padding: 0 0 0 20px;
 }
 
 main section h3 {
@@ -122,6 +116,12 @@ main section h3 {
     width: 20%;
     padding-right: 10px;
     margin: 0 5px 0 20px;
+}
+
+main section article {
+    width: 80%;
+    border-left: 2px solid var(--main);
+    padding: 0 0 0 20px;
 }
 
 /* Paragraph spacing */
@@ -139,7 +139,7 @@ main section h3 {
 /* Add figure spacing within grid */
 #work figure {
     width: 100%;
-    margin: 10px 10px;
+    margin: 10px 0px;
     position: relative;
 }
 
@@ -211,3 +211,145 @@ main section h3 {
 #contact-me a:hover {
     border-bottom: 5px solid var(--main);
 }
+
+
+@media screen and (max-width: 992px) {
+    #hero img {
+        margin-top: -100px;
+    }
+
+    main > section {
+        display: flex;
+        flex-direction: row;
+        padding: 30px 50px;
+        width: 100%;
+    }
+    
+    main section h3 {
+        text-align: right;
+        font-size: 46px;
+        width: 30%;
+        padding-right: 10px;
+        margin: 0 5px 0 20px;
+    }
+    
+    main section article {
+        width: 70%;
+        border-left: 2px solid var(--main);
+        padding: 0 0 0 20px;
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    header section {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }   
+
+    h1 {
+        font-size: 42px;
+        padding: 5px 10px 5px 10px;
+        margin-bottom: 10px;
+    }
+    
+    nav {
+        padding: 10px 10px 10px 10px;
+    }
+    
+    nav a {
+        color: var(--acc);
+        font-size: 14px;
+        padding: 3px 5px;
+        margin: 0 2px;
+        border-bottom: 3px solid var(--acc);  
+        text-decoration: none;
+        transition-property: border-bottom;
+    }
+
+    #hero {
+        height: 150px;
+        align-items: center;
+    }
+   
+    #hero img {
+        margin-top: 0;
+    }
+
+    header h2 {
+        font-size: 16px;
+        padding: 7px;
+        bottom: 0px;
+        right: auto;
+    }
+
+    main > section {
+        display: flex;
+        flex-direction: row;
+        padding: 30px 30px;
+        width: 100%;
+    }
+    
+    main section h3 {
+        text-align: right;
+        font-size: 46px;
+        width: 35%;
+        padding-right: 10px;
+        margin: 0 5px 0 5px;
+    }
+    
+    main section article {
+        width: 65%;
+        border-left: 2px solid var(--main);
+        padding: 0 0 0 20px;
+    }
+
+    #work article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #work figure > section {
+        width: 100%;
+        border: 4px solid var(--acc);
+        height: 50px;
+        overflow: hidden;
+        opacity: .8;
+        transition-property: opacity;
+    } 
+
+    #work figure:first-child > section {
+        height: 150px;
+    }
+    
+    #work img {
+        width: 100%;
+    }
+
+    #work figcaption {
+        padding: 3px;
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #work h4 {
+        font-size: 16px;
+    }
+    
+    #work p {
+        margin-left: 5px;
+    }
+
+    #contact-me article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #contact-me a {
+        margin-bottom: 5px;
+    }
+
+  }
