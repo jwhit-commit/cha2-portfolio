@@ -1,5 +1,5 @@
 
-/* Declare universal color variable for doc */
+/* Declare universal color variables for doc */
 :root {
     --head: #181149;
     --main: #2a1e83;
@@ -65,6 +65,11 @@ nav a {
     margin: 0 2px;
     border-bottom: 3px solid var(--acc);   /* add border as underline */
     text-decoration: none;
+    transition-property: border-bottom;
+}
+
+nav a:hover {
+    border-bottom: 5px solid var(--acc);
 }
 
 /* Create crop container for hero image, and arrang as flex container with relative position */
@@ -143,13 +148,20 @@ main section h3 {
     grid-column: span 2;
 }
 
-/* Make figure sections into crop containers with border with correct sizing */
+/* Make figure sections into crop containers with border with correct sizing, include hover transition effect specs */
 #work figure > section {
     width: 100%;
     border: 4px solid var(--acc);
     height: 100px;
     overflow: hidden;
+    opacity: .8;
+    transition-property: opacity;
 } 
+
+/* Add hover effect to project cards */
+#work figure section:hover {
+    opacity: 1;
+}
 
 /* Let first grid item be taller */
 #work figure:first-child > section {
@@ -166,11 +178,17 @@ main section h3 {
     padding: 10px;
     background-color: var(--acc);
     position: absolute;
-    bottom: 20px
+    bottom: 15px;
+    /* display: flex; */
 }
 
 #work h4 {
     color: var(--head);
+    font-size: 20px;
+}
+
+#work p {
+    margin-top: 5px;
 }
 
 /* Arrange as flex row to space elements across bottom */
@@ -185,5 +203,5 @@ main section h3 {
 #contact-me a {
     text-decoration: none;
     padding-bottom: 2px;
-    border-bottom: 3px solid var(--main);
+    border-bottom: 3px solid var(--main); /* add border as underline */
 }
