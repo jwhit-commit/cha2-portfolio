@@ -203,5 +203,11 @@ main section h3 {
 #contact-me a {
     text-decoration: none;
     padding-bottom: 2px;
-    border-bottom: 3px solid var(--main); /* add border as underline */
+    border-bottom: 3px solid var(--main);
+    transition: border-bottom;
+}
+
+/* Add hover effect */
+#contact-me a:hover {
+    border-bottom: 5px solid var(--main);
 }
